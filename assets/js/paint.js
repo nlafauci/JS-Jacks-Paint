@@ -1,10 +1,10 @@
 function configureListeners() {
-    var images = document.getElementsByTagName('img'); // select img elements  
+    var images = document.getElementsByTagName('img');    // select img elements  
 
 
-     for (var i = 0; i < images.length; i++) {        
-        document.getElementById(images[i].id.addEventListener('mouseover', addOpacity, false)
-        document.getElementById(images[i].id.addEventListener('mouseout', removeOpacity), false)
+    for (var i = 0; i < images.length; i++) {        
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)        
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)        
         // iterate over images and add mouseover event listeners      
     } 
 }
@@ -19,8 +19,8 @@ function addOpacity(event) {
 
 function removeOpacity(event) {
     if (this.classList.contains('dim')){
-        this.classList.remove('dim');
-    }
+       this.classList.remove('dim');
+   }
     //remove appropriate CSS class
 
     let element = document.getElementById('color-price');
